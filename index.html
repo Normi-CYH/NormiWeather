@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Weather | Normi</title>
+    <link rel="icon" href="images/logo_tab.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet"
+              href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
+</head>
+<body>
+    <div class="container">
+        <div class="first">
+            <input class="search" id="search" type="text" placeholder="ex: Taipei">
+            <button type="button" class="search_icon" onclick="search()"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <a href="#"><img id="logo" class="logo" src="images/logo_light_NBG.png" alt="logo"></a>
+        </div>
+
+        <div class="second">
+            <div class="current">
+                <div class="current_content">
+                    <p class="location" id="location">Taipei</p>
+                    <p class="current_rain_pop" id="current_rain_pop"><i class="fa-solid fa-umbrella"></i> : 80%</p>
+                    <p class="current_temp" id="current_temp">16&deg;</p>
+                    <p class="current_temp_min_max" id="current_temp_min_max">16&deg; - 20&deg;</p>
+                </div>
+                <div class="current_img">
+                    <img class="current_icon" id="current_icon" src="https://openweathermap.org/img/wn/10d@2x.png">
+                </div>
+            </div>
+
+            <div class="forecast_hour">
+                <div class="forecast_hour_temp">
+                    <p class="forecast_title">Temperature, &deg;c</p>
+                    <div class="forecast_hour_temp_graph"><canvas id="forecast_hour_temp_graph"></canvas></div>
+                </div>
+                <div class="forecast_hour_rain">
+                    <p class="forecast_title">Rain, &percnt;</p>
+                    <div class="forecast_hour_rain_graph"><canvas id="forecast_hour_rain_graph"></canvas></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="third">
+            <div class="forecast_card">
+                <p class="week" id="week_one">Tue</p>
+                <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="forecast weather pic" class="forecasr_icon" id="forecast_icon_one">
+                <p class="desc" id="desc_one">Rain</p>
+                <p class="temp_range" id="temp_range_one">10 - 15 (&deg;c)</p>
+            </div>
+            <div class="forecast_card">
+                <p class="week" id="week_two">Tue</p>
+                <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="forecast weather pic" class="forecasr_icon" id="forecast_icon_two">
+                <p class="desc" id="desc_two">Rain</p>
+                <p class="temp_range" id="temp_range_two">10 - 15 (&deg;c)</p>
+            </div>
+            <div class="forecast_card">
+                <p class="week" id="week_three">Tue</p>
+                <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="forecast weather pic" class="forecasr_icon" id="forecast_icon_three">
+                <p class="desc" id="desc_three">Rain</p>
+                <p class="temp_range" id="temp_range_three">10 - 15 (&deg;c)</p>
+            </div>
+            <div class="forecast_card">
+                <p class="week" id="week_four">Tue</p>
+                <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="forecast weather pic" class="forecasr_icon" id="forecast_icon_four">
+                <p class="desc" id="desc_four">Rain</p>
+                <p class="temp_range" id="temp_range_four">10 - 15 (&deg;c)</p>
+            </div>
+            <div class="forecast_card">
+                <p class="week" id="week_five">Tue</p>
+                <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="forecast weather pic" class="forecasr_icon" id="forecast_icon_five">
+                <p class="desc" id="desc_five">Rain</p>
+                <p class="temp_range" id="temp_range_five">10 - 15 (&deg;c)</p>
+            </div>
+        </div>
+    </div>
+    <footer>Power by Normi, 2024</footer>
+</body>
+<script>upgradeCurrentData()</script>
+<script>upgradeForecasrData()</script>
+<!-- <script>search()</script> -->
+</html>

@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+:root {
+    --color-l-1: #FDFFAB;
+    --color-l-2: #FFCF81;
+    --color-l-3: #FFB996;
+    --color-l-4: #D9EDBF;
+    --color-bg-search: #002B5B;
+    --color-font-search: #FFB996;
+    /* --color-l-1: #8FE3CF;
+    --color-l-2: #256D85;
+    --color-l-3: #2B4865;
+    --color-l-4: #002B5B;
+    --color-bg-search: #FFB996;
+    --color-font-search: #002B5B; */
+    --color-bg-element: rgba(248, 249, 249, 0.3);
+    --color-font: #212F3D;
+    --color-shadow: #566573;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    min-width: 800px;
+    background-image: linear-gradient(135deg,
+                                    var(--color-l-1), 
+                                    var(--color-l-2), 
+                                    var(--color-l-3), 
+                                    var(--color-l-4));
+    background-attachment: fixed;
+}
+.container {
+    margin: auto;
+    /* width: 70%;
+    min-width: 740px; */
+    width: 760px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aquamarine; */
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+.first {
+    width: 100%;
+    height: 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.search {
+    width: 90%;
+    height: 100%;
+    margin: 10px 5px;
+    padding: 10px;
+    font-size: 1.2rem;
+    background-color: var(--color-bg-element);
+    /* border: 3px solid var(--color-b-element); */
+    border: none;
+    border-radius: 10px;
+}
+.search_icon {
+    width: 36px;
+    height: 36px;
+    margin: 10px 5px;
+    background-color: var(--color-bg-element);
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: var(--color-font);
+    transition: all 0.2s ease-in;
+}
+.search_icon:hover {
+    background-color: var(--color-bg-search);
+    color: var(--color-font-search);
+}
+a {
+    display: flex;
+    width: 36px;
+    height: 36px;
+    margin: 10px 5px;
+}
+.logo {
+    width: 100%;
+    height: 100%;
+    /* border: 3px solid var(--color-bg-element); */
+    border-radius: 5px;
+    transition: all 0.2s ease-in;
+}
+.logo:hover {
+    /* border: 3px solid var(--color-bg-element); */
+    background-color: var(--color-bg-element);
+}
+
+.second {
+    display: flex;
+    width: 100%;
+    height: 45%;
+}
+.current {
+    margin: 10px 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background-color: var(--color-bg-element);
+    border: none;
+    border-radius: 10px;
+}
+.current_content {
+    padding: 20px;
+    text-align: center;
+    color: var(--color-font);
+    width: 70%;
+}
+.location {
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+.current_rain_pop {
+    font-size: 1.2rem;
+}
+.current_temp {
+    font-size: 4rem;
+    /* text-shadow: 2px 2px 3px var(--color-shadow); */
+}
+.current_temp_min_max {
+    font-size: 1.2rem;
+}
+.current_img {
+    width: 60%;
+    text-align: left;
+}
+.current_icon {
+    width: 80%;
+}
+.forecast_hour {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px 5px;
+    width: 50%;
+}
+.forecast_hour_temp {
+    height: 50%;
+    background-color: var(--color-bg-element);
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+#forecast_hour_temp {
+    margin: auto;
+}
+.forecast_hour_temp_graph {
+    width: auto;
+    height: 65%;
+    margin: 10px;
+    /* background-color: #fff; */
+}
+.forecast_hour_rain {
+    height: 50%;
+    background-color: var(--color-bg-element);
+    border: none;
+    border-radius: 10px;
+}
+.forecast_hour_rain_graph {
+    width: auto;
+    height: 65%;
+    margin: 10px;
+    /* background-color: #fff; */
+}
+.forecast_title {
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.third {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+}
+.forecast_card {
+    width: 20%;
+    margin: 10px 5px;
+    background-color: var(--color-bg-element);
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+}
+.week {
+    color: var(--color-font);
+    font-size: 1.3rem;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 20px;
+    font-style: italic;
+}
